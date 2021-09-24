@@ -8,8 +8,8 @@ Serve self-contained distribution builds of `Swagger UI`_ and `Redoc`_ with Djan
 
 This Django app is an optional addition to `drf-spectacular`_, but does not depend on it. It may also be used independently.
 
-* `Swagger UI`_ version ``0.0.0-s``
-* `Redoc`_ version ``0.0.0-r``
+* `Swagger UI`_ version ``3.52.3``
+* `Redoc`_ version ``2.0.0-rc.53``
 
 This is a self-updating and self-publishing repository that looks for updates once a week.
 
