@@ -1,0 +1,6 @@
+include *.rst
+include LICENSE
+graft drf_spectacular_sidecar/static/drf_spectacular_sidecar/
+graft requirements
+global-exclude __pycache__
+global-exclude *.py[co]

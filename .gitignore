@@ -1,0 +1,12 @@
+*.pyc
+*.db
+*~
+.*
+
+build/
+dist/
+venv/
+*.egg-info/
+MANIFEST
+
+!.gitignore

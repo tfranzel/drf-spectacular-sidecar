@@ -1,0 +1,57 @@
+=======================
+drf-spectacular-sidecar
+=======================
+
+|pypi-version|
+
+Serve self-contained distribution builds of `Swagger UI`_ and `Redoc`_ with Django either via `runserver`_ or `collectstatic`_.
+
+This Django app is an optional addition to `drf-spectacular`_, but does not depend on it. It may also be used independently.
+
+* `Swagger UI`_ version ``0.0.0-s``
+* `Redoc`_ version ``0.0.0-r``
+
+This is a self-updating and self-publishing repository that looks for updates once a week.
+
+
+Installation
+------------
+
+.. code:: bash
+
+    $ pip install drf-spectacular-sidecar
+
+The package needs to be registered to allow Django to discover the static files.
+
+.. code:: python
+
+    INSTALLED_APPS = [
+        # ALL YOUR APPS
+        'drf_spectacular_sidecar',
+    ]
+
+Requirements
+------------
+
+Django >= 2.2
+
+Licenses
+--------
+
+Provided by `T. Franzel <https://github.com/tfranzel>`_. `Licensed under 3-Clause BSD <https://github.com/tfranzel/drf-spectacular-sidecar/blob/master/LICENSE>`_.
+
+This package includes distribution builds of
+
+* `Swagger UI`_: The `original license (Apache 2.0) <https://github.com/swagger-api/swagger-ui/blob/master/LICENSE>`_ and copyright apply to those files.
+* `Redoc`_: The `original license (MIT) <https://github.com/Redocly/redoc/blob/master/LICENSE>`_ and copyright apply to those files.
+
+
+.. |pypi-version| image:: https://img.shields.io/pypi/v/drf-spectacular-sidecar.svg
+   :target: https://pypi.python.org/pypi/drf-spectacular-sidecar
+
+.. _Django: https://github.com/tfranzel/drf-spectacular
+.. _drf-spectacular: https://github.com/tfranzel/drf-spectacular
+.. _Redoc: https://github.com/Redocly/redoc
+.. _Swagger UI: https://github.com/swagger-api/swagger-ui
+.. _collectstatic: https://docs.djangoproject.com/en/3.2/ref/contrib/staticfiles/#collectstatic
+.. _runserver: https://docs.djangoproject.com/en/3.2/ref/contrib/staticfiles/#runserver
