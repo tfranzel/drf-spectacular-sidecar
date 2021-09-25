@@ -48,7 +48,7 @@ This package includes distribution builds of
 
 .. |pypi-version| image:: https://img.shields.io/pypi/v/drf-spectacular-sidecar.svg
    :target: https://pypi.org/project/drf-spectacular-sidecar/
-.. |pypi-dl| image:: https://img.shields.io/pypi/dm/drf-spectacular-sidecar   :alt: PyPI - Downloads
+.. |pypi-dl| image:: https://img.shields.io/pypi/dm/drf-spectacular-sidecar
    :target: https://pypi.org/project/drf-spectacular-sidecar/
 
 .. _Django: https://www.djangoproject.com/
