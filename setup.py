@@ -5,7 +5,7 @@ from setuptools import setup
 
 name = "drf-spectacular-sidecar"
 package = "drf_spectacular_sidecar"
-description = ""
+description = "Serve self-contained distribution builds of Swagger UI and Redoc with Django"
 url = "https://github.com/tfranzel/drf-spectacular-sidecar"
 author = "T. Franzel"
 author_email = "tfranzel@gmail.com"
