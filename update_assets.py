@@ -83,7 +83,7 @@ def update_dist(package, tag) -> Optional[str]:
 
 def update_redoc() -> tuple[str, Optional[str]]:
     old_version = _CURRENT_VERSIONS["redoc"]
-    return old_version, update_dist(package="redoc", tag="next")
+    return old_version, update_dist(package="redoc", tag="latest")
 
 
 def update_swagger_ui() -> tuple[str, Optional[str]]:

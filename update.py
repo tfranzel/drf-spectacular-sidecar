@@ -51,15 +51,15 @@ def main():
         run_or_fail("git config user.name github-actions")
         run_or_fail("git config user.email github-actions@github.com")
 
+    # update repo
     run_or_fail("git add .")
     run_or_fail(f"git commit -m 'version bump {new_version}'")
     run_or_fail(f"git tag -a '{new_version}' -m 'version {new_version}'")
-    # run_or_fail("git push --follow-tags")
-
+    run_or_fail("git push --follow-tags")
+    # build
     run_or_fail("python setup.py sdist bdist_wheel")
-    # run_or_fail("twine check dist/*")
-    # run_or_fail("twine upload dist/*")
-
+    run_or_fail("twine check dist/*")
+    run_or_fail("twine upload dist/*")
     # cleanup
     shutil.rmtree('dist')
     shutil.rmtree('build')
