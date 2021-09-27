@@ -38,14 +38,16 @@ def main():
         file=f"{PACKAGE}/__init__.py",
         func=lambda l: l.replace(old_version, new_version)
     )
-    update_file(
-        file="README.rst",
-        func=lambda l: l.replace(old_redoc_version, new_redoc_version)
-    )
-    update_file(
-        file="README.rst",
-        func=lambda l: l.replace(old_swagger_ui_version, new_swagger_ui_version),
-    )
+    if new_redoc_version:
+        update_file(
+            file="README.rst",
+            func=lambda l: l.replace(old_redoc_version, new_redoc_version)
+        )
+    if new_swagger_ui_version:
+        update_file(
+            file="README.rst",
+            func=lambda l: l.replace(old_swagger_ui_version, new_swagger_ui_version),
+        )
 
     if os.environ.get("CI"):
         run_or_fail("git config user.name github-actions")
