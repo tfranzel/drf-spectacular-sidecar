@@ -8,11 +8,11 @@ Serve self-contained distribution builds of `Swagger UI`_ and `Redoc`_ with `Dja
 
 This Django app is an optional addition to `drf-spectacular`_, but does not depend on it. It may also be used independently.
 
-* `Swagger UI`_ version ``3.52.3`` (`npm <https://www.npmjs.com/package/swagger-ui-dist>`_)
-* `Redoc`_ version ``2.0.0-rc.53`` (`npm <https://www.npmjs.com/package/redoc>`_)
+* `Swagger UI`_ version ``3.52.3`` (`npm <https://www.npmjs.com/package/swagger-ui-dist>`__)
+* `Redoc`_ version ``2.0.0-rc.53`` (`npm <https://www.npmjs.com/package/redoc>`__)
 
 This is a self-updating and self-publishing repository that looks for updates once a week.
-The distribution files are sourced from npm via `jsdelivr <https://www.jsdelivr.com/>`_, validated, packaged and uploaded to `PyPi <https://pypi.org/project/drf-spectacular-sidecar/>`_.
+The distribution files are sourced from npm via `jsdelivr`_, validated, packaged and uploaded to `PyPi`_.
 
 Installation
 ------------
@@ -51,6 +51,8 @@ This package includes distribution builds of
 .. |pypi-dl| image:: https://img.shields.io/pypi/dm/drf-spectacular-sidecar
    :target: https://pypi.org/project/drf-spectacular-sidecar/
 
+.. _PyPi: https://pypi.org/project/drf-spectacular-sidecar/
+.. _jsdelivr: https://www.jsdelivr.com/
 .. _Django: https://www.djangoproject.com/
 .. _drf-spectacular: https://github.com/tfranzel/drf-spectacular
 .. _Redoc: https://github.com/Redocly/redoc

@@ -2,7 +2,7 @@ name: Update repo and publish to PyPi
 
 on:
   schedule:
-    - cron:  '0 10 * * 1'
+    - cron:  '1 11 * * 1'
   workflow_dispatch:
 
 jobs:
