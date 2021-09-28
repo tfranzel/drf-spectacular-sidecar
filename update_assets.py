@@ -4,6 +4,8 @@ import json
 from typing import Optional
 from urllib.request import urlopen
 
+from packaging.version import parse as vp
+
 STATIC_PATH = "drf_spectacular_sidecar/static/drf_spectacular_sidecar"
 JSDELIVR_META_URL = "https://data.jsdelivr.com/v1/package/npm"
 JSDELIVR_DATA_URL = "https://cdn.jsdelivr.net/npm"
@@ -62,7 +64,7 @@ def update_dist(package, tag) -> Optional[str]:
     old_version = _CURRENT_VERSIONS[package]
     new_version = get_jsdelivr_tags(package, tag)
     print(f"'{package}' package tag '{tag}' has version '{new_version}'")
-    if new_version <= old_version:
+    if vp(new_version) <= vp(old_version):
         print(f"'{package}' package is up-to-date")
         return None
     package_hashes = dict(

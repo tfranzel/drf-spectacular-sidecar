@@ -3,6 +3,8 @@ import re
 import shutil
 from datetime import date
 
+from packaging.version import parse as vp
+
 from update_assets import update_redoc, update_swagger_ui
 
 PACKAGE = 'drf_spectacular_sidecar'
@@ -31,8 +33,9 @@ def main():
     with open(f"{PACKAGE}/__init__.py") as fh:
         old_version = re.search(r"__version__ = '([\d.]+)'\n", fh.read()).group(1)
 
-    new_version = date.today().strftime("%Y.%m.%d")
-    assert old_version < new_version, 'sidecar version must be newer'
+    today = date.today()
+    new_version = f'{today.year}.{today.month}.{today.day}'
+    assert vp(old_version) < vp(new_version), 'sidecar version must be newer'
 
     update_file(
         file=f"{PACKAGE}/__init__.py",
