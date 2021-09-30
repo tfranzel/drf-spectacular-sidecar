@@ -13,6 +13,7 @@ JSDELIVR_DATA_URL = "https://cdn.jsdelivr.net/npm"
 FILES = {
     "redoc": [
         "bundles/redoc.standalone.js",
+        "bundles/redoc.standalone.js.LICENSE.txt",
     ],
     "swagger-ui-dist": [
         "swagger-ui-bundle.js",
@@ -57,7 +58,8 @@ def validated_download(url, target, expected_hash) -> None:
     print(f"download {url} to {target} [{expected_hash}]")
     with open(path, "wb") as fh:
         fh.write(urlopen(url).read())
-    assert get_file_hash(path) == expected_hash
+    if expected_hash is not None:
+        assert get_file_hash(path) == expected_hash
 
 
 def update_dist(package, tag) -> Optional[str]:
@@ -71,6 +73,7 @@ def update_dist(package, tag) -> Optional[str]:
         parse_jsdelivr_package_tree(get_jsdelivr_package_content(package, new_version))
     )
     for asset in FILES[package]:
+        assert package_hashes[asset] is not None
         validated_download(
             url=f"{JSDELIVR_DATA_URL}/{package}@{new_version}/{asset}",
             target=f"{package}/{asset}",
@@ -90,4 +93,12 @@ def update_redoc() -> tuple[str, Optional[str]]:
 
 def update_swagger_ui() -> tuple[str, Optional[str]]:
     old_version = _CURRENT_VERSIONS["swagger-ui-dist"]
-    return old_version, update_dist(package="swagger-ui-dist", tag="latest")
+    new_version = update_dist(package="swagger-ui-dist", tag="latest")
+    if new_version:
+        # download license from GH as it is unfortunately not packaged in swagger-ui-dist
+        validated_download(
+            url=f"https://raw.githubusercontent.com/swagger-api/swagger-ui/v{new_version}/LICENSE",
+            target=f"swagger-ui-dist/swagger-ui-bundle.js.LICENSE.txt",
+            expected_hash=None
+        )
+    return old_version, new_version
