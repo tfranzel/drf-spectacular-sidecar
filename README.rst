@@ -4,11 +4,12 @@ drf-spectacular-sidecar
 
 |pypi-version| |pypi-dl|
 
-Serve self-contained distribution builds of `Swagger UI`_ and `Redoc`_ with `Django`_ either via `runserver`_ or `collectstatic`_.
+Serve self-contained distribution builds of `Swagger UI`_, `RapiDoc`_, and `Redoc`_ with `Django`_ either via `runserver`_ or `collectstatic`_.
 
 This Django app is an optional addition to `drf-spectacular`_, but does not depend on it. It may also be used independently.
 
 * `Swagger UI`_ version ``3.52.3`` (`npm <https://www.npmjs.com/package/swagger-ui-dist>`__)
+* `RapiDoc`_ version ``9.1.3`` (`npm <https://www.npmjs.com/package/rapidoc>`__)
 * `Redoc`_ version ``2.0.0-rc.56`` (`npm <https://www.npmjs.com/package/redoc>`__)
 
 This is a self-updating and self-publishing repository that looks for updates once a week.
@@ -43,6 +44,7 @@ Provided by `T. Franzel <https://github.com/tfranzel>`_. `Licensed under 3-Claus
 This package includes distribution builds of
 
 * `Swagger UI`_: The `original license (Apache 2.0) <https://github.com/swagger-api/swagger-ui/blob/master/LICENSE>`_ and copyright apply to those files.
+* `RapiDoc`_: The `original license (MIT) <https://github.com/mrin9/RapiDoc/blob/master/LICENSE.txt>`_ and copyright apply to those files.
 * `Redoc`_: The `original license (MIT) <https://github.com/Redocly/redoc/blob/master/LICENSE>`_ and copyright apply to those files.
 
 
@@ -55,6 +57,7 @@ This package includes distribution builds of
 .. _jsdelivr: https://www.jsdelivr.com/
 .. _Django: https://www.djangoproject.com/
 .. _drf-spectacular: https://github.com/tfranzel/drf-spectacular
+.. _RapiDoc: https://github.com/mrin9/RapiDoc
 .. _Redoc: https://github.com/Redocly/redoc
 .. _Swagger UI: https://github.com/swagger-api/swagger-ui
 .. _collectstatic: https://docs.djangoproject.com/en/3.2/ref/contrib/staticfiles/#collectstatic

@@ -11,6 +11,11 @@ JSDELIVR_META_URL = "https://data.jsdelivr.com/v1/package/npm"
 JSDELIVR_DATA_URL = "https://cdn.jsdelivr.net/npm"
 
 FILES = {
+    "rapidoc": [
+        "dist/rapidoc-min.js",
+        "dist/rapidoc-min.js.map",
+        "dist/rapidoc-min.js.LICENSE.txt",
+    ],
     "redoc": [
         "bundles/redoc.standalone.js",
         "bundles/redoc.standalone.js.map",
@@ -88,6 +93,11 @@ def update_dist(package, tag) -> Optional[str]:
     with open("distributions.json", 'w') as fh:
         json.dump(_CURRENT_VERSIONS, fh, indent=4)
     return new_version
+
+
+def update_rapidoc() -> tuple[str, Optional[str]]:
+    old_version = _CURRENT_VERSIONS["rapidoc"]
+    return old_version, update_dist(package="rapidoc", tag="latest")
 
 
 def update_redoc() -> tuple[str, Optional[str]]:

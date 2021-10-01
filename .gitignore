@@ -3,10 +3,10 @@
 *~
 .*
 
-build/
-dist/
-venv/
-*.egg-info/
-MANIFEST
+/build/
+/dist/
+/venv/
+/*.egg-info/
+/MANIFEST
 
 !.gitignore

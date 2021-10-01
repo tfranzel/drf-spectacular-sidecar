@@ -5,7 +5,7 @@ from datetime import date
 
 from packaging.version import parse as vp
 
-from update_assets import update_redoc, update_swagger_ui
+from update_assets import update_rapidoc, update_redoc, update_swagger_ui
 
 PACKAGE = 'drf_spectacular_sidecar'
 
@@ -23,10 +23,11 @@ def run_or_fail(cmd):
 
 
 def main():
+    old_rapidoc_version, new_rapidoc_version = update_rapidoc()
     old_redoc_version, new_redoc_version = update_redoc()
     old_swagger_ui_version, new_swagger_ui_version = update_swagger_ui()
 
-    if not new_redoc_version and not new_swagger_ui_version:
+    if not new_rapidoc_version and not new_redoc_version and not new_swagger_ui_version:
         print('no updates available')
         return
 
@@ -41,6 +42,11 @@ def main():
         file=f"{PACKAGE}/__init__.py",
         func=lambda l: l.replace(old_version, new_version)
     )
+    if new_rapidoc_version:
+        update_file(
+            file="README.rst",
+            func=lambda l: l.replace(old_rapidoc_version, new_rapidoc_version)
+        )
     if new_redoc_version:
         update_file(
             file="README.rst",
