@@ -13,13 +13,17 @@ JSDELIVR_DATA_URL = "https://cdn.jsdelivr.net/npm"
 FILES = {
     "redoc": [
         "bundles/redoc.standalone.js",
+        "bundles/redoc.standalone.js.map",
         "bundles/redoc.standalone.js.LICENSE.txt",
     ],
     "swagger-ui-dist": [
         "swagger-ui-bundle.js",
+        "swagger-ui-bundle.js.map",
         "swagger-ui-standalone-preset.js",
+        "swagger-ui-standalone-preset.js.map",
         "oauth2-redirect.html",
         "swagger-ui.css",
+        "swagger-ui.css.map",
         "favicon-32x32.png",
     ]
 }
