@@ -12,7 +12,7 @@ This Django app is an optional addition to `drf-spectacular`_, but does not depe
 * `Redoc`_ version ``2.0.0-rc.56`` (`npm <https://www.npmjs.com/package/redoc>`__)
 
 This is a self-updating and self-publishing repository that looks for updates once a week.
-The distribution files are sourced from npm via `jsdelivr`_, validated, packaged and uploaded to `PyPi`_.
+The distribution files are sourced from npm via `jsdelivr`_, validated, packaged and uploaded to `PyPI`_.
 
 Installation
 ------------
@@ -51,7 +51,7 @@ This package includes distribution builds of
 .. |pypi-dl| image:: https://img.shields.io/pypi/dm/drf-spectacular-sidecar
    :target: https://pypi.org/project/drf-spectacular-sidecar/
 
-.. _PyPi: https://pypi.org/project/drf-spectacular-sidecar/
+.. _PyPI: https://pypi.org/project/drf-spectacular-sidecar/
 .. _jsdelivr: https://www.jsdelivr.com/
 .. _Django: https://www.djangoproject.com/
 .. _drf-spectacular: https://github.com/tfranzel/drf-spectacular
