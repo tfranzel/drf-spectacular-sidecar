@@ -1,3 +1,4 @@
+import json
 import os
 import re
 import shutil
@@ -22,13 +23,32 @@ def run_or_fail(cmd):
     assert not os.system(cmd), f"failed: '{cmd}'"
 
 
+def get_config(name):
+    with open("config.json") as fh:
+        return json.load(fh).get(name)
+
+
+def update_config(name, value):
+    with open("config.json", "r") as fh:
+        config = json.load(fh)
+    config[name] = value
+    with open("config.json", "w") as fh:
+        json.dump(config, fh, indent=4)
+
+
 def main():
     old_redoc_version, new_redoc_version = update_redoc()
     old_swagger_ui_version, new_swagger_ui_version = update_swagger_ui()
 
-    if not new_redoc_version and not new_swagger_ui_version:
+    if (
+        not new_redoc_version
+        and not new_swagger_ui_version
+        and not get_config('hotfix_required')
+    ):
         print('no updates available')
         return
+
+    update_config('hotfix_required', False)
 
     with open(f"{PACKAGE}/__init__.py") as fh:
         old_version = re.search(r"__version__ = '([\d.]+)'\n", fh.read()).group(1)
