@@ -13,7 +13,7 @@ object-assign
 /*!
  * ReDoc - OpenAPI/Swagger-generated API Reference Documentation
  * -------------------------------------------------------------
- *   Version: "2.0.0-rc.64"
+ *   Version: "2.0.0-rc.65"
  *   Repo: https://github.com/Redocly/redoc
  */
 
