@@ -1,6 +1,6 @@
 import django
 
-__version__ = '2022.3.28'
+__version__ = '2022.4.1'
 
 if django.VERSION < (3, 2):
     default_app_config = 'drf_spectacular_sidecar.apps.SpectacularSidecarConfig'

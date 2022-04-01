@@ -13,7 +13,7 @@ object-assign
 /*!
  * ReDoc - OpenAPI/Swagger-generated API Reference Documentation
  * -------------------------------------------------------------
- *   Version: "2.0.0-rc.65"
+ *   Version: "2.0.0-rc.66"
  *   Repo: https://github.com/Redocly/redoc
  */
 
@@ -23,13 +23,6 @@ object-assign
  * Copyright Oleg Korsunsky | http://wd.dizaina.net/
  *
  * MIT License
- */
-
-/*!
- * The buffer module from node.js, for the browser.
- *
- * @author   Feross Aboukhadijeh <https://feross.org>
- * @license  MIT
  */
 
 /*!
@@ -56,8 +49,6 @@ PERFORMANCE OF THIS SOFTWARE.
 /*! @license DOMPurify | (c) Cure53 and other contributors | Released under the Apache license 2.0 and Mozilla Public License 2.0 | github.com/cure53/DOMPurify/blob/2.2.2/LICENSE */
 
 /*! https://mths.be/punycode v1.3.2 by @mathias */
-
-/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
 
 /*!***************************************************
 * mark.js v8.11.1
