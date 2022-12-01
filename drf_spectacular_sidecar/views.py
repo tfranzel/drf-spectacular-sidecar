@@ -1,4 +1,4 @@
-from django.template.context_processors import static
+from django.templatetags.static import static
 from django.views.generic import RedirectView
 
 
