@@ -5,15 +5,15 @@ object-assign
 */
 
 /*!
-  Copyright (c) 2018 Jed Watson.
-  Licensed under the MIT License (MIT), see
-  http://jedwatson.github.io/classnames
+	Copyright (c) 2018 Jed Watson.
+	Licensed under the MIT License (MIT), see
+	http://jedwatson.github.io/classnames
 */
 
 /*!
  * ReDoc - OpenAPI/Swagger-generated API Reference Documentation
  * -------------------------------------------------------------
- *   Version: "2.1.3"
+ *   Version: "2.1.4"
  *   Repo: https://github.com/Redocly/redoc
  */
 
@@ -31,7 +31,7 @@ object-assign
  * Licensed under MIT
  */
 
-/*! @license DOMPurify | (c) Cure53 and other contributors | Released under the Apache license 2.0 and Mozilla Public License 2.0 | github.com/cure53/DOMPurify/blob/2.2.2/LICENSE */
+/*! @license DOMPurify 3.0.6 | (c) Cure53 and other contributors | Released under the Apache license 2.0 and Mozilla Public License 2.0 | github.com/cure53/DOMPurify/blob/3.0.6/LICENSE */
 
 /*!***************************************************
 * mark.js v8.11.1
