@@ -102,7 +102,7 @@ def update_swagger_ui() -> tuple[str, Optional[str]]:
         # download license from GH as it is unfortunately not packaged in swagger-ui-dist
         validated_download(
             url=f"https://raw.githubusercontent.com/swagger-api/swagger-ui/v{new_version}/LICENSE",
-            target=f"swagger-ui-dist/swagger-ui-bundle.js.LICENSE.txt",
+            target="swagger-ui-dist/swagger-ui-bundle.js.LICENSE.txt",
             expected_hash=None
         )
     return old_version, new_version
