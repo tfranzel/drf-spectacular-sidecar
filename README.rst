@@ -8,8 +8,8 @@ Serve self-contained distribution builds of `Swagger UI`_ and `Redoc`_ with `Dja
 
 This Django app is an optional addition to `drf-spectacular`_, but does not depend on it. It may also be used independently.
 
-* `Swagger UI`_ version ``5.18.3`` (`npm <https://www.npmjs.com/package/swagger-ui-dist>`__)
-* `Redoc`_ version ``2.3.0`` (`npm <https://www.npmjs.com/package/redoc>`__)
+* `Swagger UI`_ version ``5.20.0`` (`npm <https://www.npmjs.com/package/swagger-ui-dist>`__)
+* `Redoc`_ version ``2.4.0`` (`npm <https://www.npmjs.com/package/redoc>`__)
 
 This is a self-updating and self-publishing repository that looks for updates on the 1st of every month.
 The distribution files are sourced from npm via `jsdelivr`_, validated, packaged and uploaded to `PyPI`_.
