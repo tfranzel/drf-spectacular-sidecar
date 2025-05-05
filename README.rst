@@ -4,7 +4,7 @@ drf-spectacular-sidecar
 
 |pypi-version| |pypi-dl|
 
-Serve self-contained distribution builds of `Swagger UI`_ and `Redoc`_ with `Django`_ either via `runserver`_ or `collectstatic`_.
+Serve self-contained distribution builds of `Swagger UI`_, `Redoc`_, and `Scalar`_ with `Django`_ either via `runserver`_ or `collectstatic`_.
 
 This Django app is an optional addition to `drf-spectacular`_, but does not depend on it. It may also be used independently.
 
@@ -58,6 +58,7 @@ This package includes distribution builds of
 .. _Django: https://www.djangoproject.com/
 .. _drf-spectacular: https://github.com/tfranzel/drf-spectacular
 .. _Redoc: https://github.com/Redocly/redoc
+.. _Scalar: https://github.com/scalar/scalar
 .. _Swagger UI: https://github.com/swagger-api/swagger-ui
 .. _collectstatic: https://docs.djangoproject.com/en/3.2/ref/contrib/staticfiles/#collectstatic
 .. _runserver: https://docs.djangoproject.com/en/3.2/ref/contrib/staticfiles/#runserver
