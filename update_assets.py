@@ -16,6 +16,10 @@ FILES = {
         "bundles/redoc.standalone.js.map",
         "bundles/redoc.standalone.js.LICENSE.txt",
     ],
+    "scalar": [
+        "standalone.js",
+        "style.min.css",
+    ],
     "swagger-ui-dist": [
         "swagger-ui-bundle.js",
         "swagger-ui-bundle.js.map",
@@ -25,7 +29,7 @@ FILES = {
         "swagger-ui.css",
         "swagger-ui.css.map",
         "favicon-32x32.png",
-    ]
+    ],
 }
 
 with open("distributions.json") as fh:
@@ -85,7 +89,7 @@ def update_dist(package, tag) -> Optional[str]:
         )
     print(f"updated '{package}' from {old_version} to {new_version}")
     _CURRENT_VERSIONS[package] = new_version
-    with open("distributions.json", 'w') as fh:
+    with open("distributions.json", "w") as fh:
         json.dump(_CURRENT_VERSIONS, fh, indent=4)
     return new_version
 
@@ -93,6 +97,11 @@ def update_dist(package, tag) -> Optional[str]:
 def update_redoc() -> tuple[str, Optional[str]]:
     old_version = _CURRENT_VERSIONS["redoc"]
     return old_version, update_dist(package="redoc", tag="latest")
+
+
+def update_scalar() -> tuple[str, Optional[str]]:
+    old_version = _CURRENT_VERSIONS["scalar"]
+    return old_version, update_dist(package="scalar", tag="latest")
 
 
 def update_swagger_ui() -> tuple[str, Optional[str]]:
@@ -103,6 +112,6 @@ def update_swagger_ui() -> tuple[str, Optional[str]]:
         validated_download(
             url=f"https://raw.githubusercontent.com/swagger-api/swagger-ui/v{new_version}/LICENSE",
             target="swagger-ui-dist/swagger-ui-bundle.js.LICENSE.txt",
-            expected_hash=None
+            expected_hash=None,
         )
     return old_version, new_version
