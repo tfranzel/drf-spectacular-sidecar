@@ -25,6 +25,9 @@ FILES = {
         "swagger-ui.css",
         "swagger-ui.css.map",
         "favicon-32x32.png",
+    ],
+    "@scalar/api-reference": [
+        "dist/browser/standalone.js",
     ]
 }
 
@@ -106,3 +109,8 @@ def update_swagger_ui() -> tuple[str, Optional[str]]:
             expected_hash=None
         )
     return old_version, new_version
+
+
+def update_scalar() -> tuple[str, Optional[str]]:
+    old_version = _CURRENT_VERSIONS["@scalar/api-reference"]
+    return old_version, update_dist(package="@scalar/api-reference", tag="latest")
