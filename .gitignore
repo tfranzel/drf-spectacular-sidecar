@@ -9,4 +9,6 @@ venv/
 *.egg-info/
 MANIFEST
 
+!/drf_spectacular_sidecar/static/drf_spectacular_sidecar/@scalar/api-reference/*
+
 !.gitignore

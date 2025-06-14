@@ -6,7 +6,7 @@ from datetime import date
 
 from packaging.version import parse as vp
 
-from update_assets import update_redoc, update_swagger_ui
+from update_assets import update_redoc, update_scalar, update_swagger_ui
 
 PACKAGE = 'drf_spectacular_sidecar'
 
@@ -39,10 +39,12 @@ def update_config(name, value):
 def main():
     old_redoc_version, new_redoc_version = update_redoc()
     old_swagger_ui_version, new_swagger_ui_version = update_swagger_ui()
+    old_scalar_version, new_scalar_version = update_scalar()
 
     if (
         not new_redoc_version
         and not new_swagger_ui_version
+        and not new_scalar_version
         and not get_config('hotfix_required')
     ):
         print('no updates available')
@@ -70,6 +72,11 @@ def main():
         update_file(
             file="README.rst",
             func=lambda l: l.replace(old_swagger_ui_version, new_swagger_ui_version),
+        )
+    if new_scalar_version:
+        update_file(
+            file="README.rst",
+            func=lambda l: l.replace(old_scalar_version, new_scalar_version),
         )
 
     if os.environ.get("CI"):

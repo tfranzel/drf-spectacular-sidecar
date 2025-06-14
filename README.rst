@@ -4,12 +4,13 @@ drf-spectacular-sidecar
 
 |pypi-version| |pypi-dl|
 
-Serve self-contained distribution builds of `Swagger UI`_ and `Redoc`_ with `Django`_ either via `runserver`_ or `collectstatic`_.
+Serve self-contained distribution builds of `Swagger UI`_, `Redoc`_, and `Scalar`_ with `Django`_ either via `runserver`_ or `collectstatic`_.
 
 This Django app is an optional addition to `drf-spectacular`_, but does not depend on it. It may also be used independently.
 
-* `Swagger UI`_ version ``5.22.0`` (`npm <https://www.npmjs.com/package/swagger-ui-dist>`__)
+* `Swagger UI`_ version ``5.24.1`` (`npm <https://www.npmjs.com/package/swagger-ui-dist>`__)
 * `Redoc`_ version ``2.5.0`` (`npm <https://www.npmjs.com/package/redoc>`__)
+* `Scalar`_ version ``1.31.11`` (`npm <https://www.npmjs.com/package/@scalar/api-reference>`__)
 
 This is a self-updating and self-publishing repository that looks for updates on the 1st of every month.
 The distribution files are sourced from npm via `jsdelivr`_, validated, packaged and uploaded to `PyPI`_.
@@ -44,6 +45,7 @@ This package includes distribution builds of
 
 * `Swagger UI`_: The `original license (Apache 2.0) <https://github.com/swagger-api/swagger-ui/blob/master/LICENSE>`_ and copyright apply to those files.
 * `Redoc`_: The `original license (MIT) <https://github.com/Redocly/redoc/blob/master/LICENSE>`_ and copyright apply to those files.
+* `Scalar`_: The `original license (MIT) <https://github.com/scalar/scalar/blob/main/LICENSE>`_ and copyright apply to those files.
 
 
 .. |pypi-version| image:: https://img.shields.io/pypi/v/drf-spectacular-sidecar.svg
@@ -57,5 +59,6 @@ This package includes distribution builds of
 .. _drf-spectacular: https://github.com/tfranzel/drf-spectacular
 .. _Redoc: https://github.com/Redocly/redoc
 .. _Swagger UI: https://github.com/swagger-api/swagger-ui
+.. _Scalar: https://github.com/scalar/scalar
 .. _collectstatic: https://docs.djangoproject.com/en/3.2/ref/contrib/staticfiles/#collectstatic
 .. _runserver: https://docs.djangoproject.com/en/3.2/ref/contrib/staticfiles/#runserver
