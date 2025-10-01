@@ -7,7 +7,7 @@
 /*!
  * ReDoc - OpenAPI/Swagger-generated API Reference Documentation
  * -------------------------------------------------------------
- *   Version: "2.5.0"
+ *   Version: "2.5.1"
  *   Repo: https://github.com/Redocly/redoc
  */
 
@@ -66,9 +66,9 @@
 
 /**
  * @license React
- * use-sync-external-store-shim.production.min.js
+ * use-sync-external-store-shim.production.js
  *
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
