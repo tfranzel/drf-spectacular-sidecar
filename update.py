@@ -6,7 +6,7 @@ from datetime import date
 
 from packaging.version import parse as vp
 
-from update_assets import update_redoc, update_swagger_ui
+from update_assets import update_package
 
 PACKAGE = 'drf_spectacular_sidecar'
 
@@ -37,8 +37,8 @@ def update_config(name, value):
 
 
 def main():
-    old_redoc_version, new_redoc_version = update_redoc()
-    old_swagger_ui_version, new_swagger_ui_version = update_swagger_ui()
+    old_redoc_version, new_redoc_version = update_package("redoc")
+    old_swagger_ui_version, new_swagger_ui_version = update_package("swagger-ui-dist")
 
     if (
         not new_redoc_version

@@ -12,9 +12,10 @@ JSDELIVR_DATA_URL = "https://cdn.jsdelivr.net/npm"
 
 FILES = {
     "redoc": [
-        "bundles/redoc.standalone.js",
-        "bundles/redoc.standalone.js.map",
-        "bundles/redoc.standalone.js.LICENSE.txt",
+        "bundle/redoc.d.ts",
+        "bundle/redoc.js",
+        "bundle/redoc.standalone.js",
+        "LICENSE",
     ],
     "swagger-ui-dist": [
         "swagger-ui-bundle.js",
@@ -22,9 +23,11 @@ FILES = {
         "swagger-ui-standalone-preset.js",
         "swagger-ui-standalone-preset.js.map",
         "oauth2-redirect.html",
+        "oauth2-redirect.js",
         "swagger-ui.css",
         "swagger-ui.css.map",
         "favicon-32x32.png",
+        "LICENSE",
     ]
 }
 
@@ -90,19 +93,6 @@ def update_dist(package, tag) -> Optional[str]:
     return new_version
 
 
-def update_redoc() -> tuple[str, Optional[str]]:
-    old_version = _CURRENT_VERSIONS["redoc"]
-    return old_version, update_dist(package="redoc", tag="latest")
-
-
-def update_swagger_ui() -> tuple[str, Optional[str]]:
-    old_version = _CURRENT_VERSIONS["swagger-ui-dist"]
-    new_version = update_dist(package="swagger-ui-dist", tag="latest")
-    if new_version:
-        # download license from GH as it is unfortunately not packaged in swagger-ui-dist
-        validated_download(
-            url=f"https://raw.githubusercontent.com/swagger-api/swagger-ui/v{new_version}/LICENSE",
-            target="swagger-ui-dist/swagger-ui-bundle.js.LICENSE.txt",
-            expected_hash=None
-        )
-    return old_version, new_version
+def update_package(package: str) -> tuple[str, Optional[str]]:
+    old_version = _CURRENT_VERSIONS[package]
+    return old_version, update_dist(package=package, tag="latest")
