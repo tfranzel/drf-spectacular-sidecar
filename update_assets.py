@@ -12,9 +12,9 @@ JSDELIVR_DATA_URL = "https://cdn.jsdelivr.net/npm"
 
 FILES = {
     "redoc": [
-        "bundle/redoc.d.ts",
-        "bundle/redoc.js",
-        "bundle/redoc.standalone.js",
+        "bundles/redoc.standalone.js",
+        "bundles/redoc.standalone.js.LICENSE.txt",
+        "bundles/redoc.standalone.js.map",
         "LICENSE",
     ],
     "swagger-ui-dist": [
